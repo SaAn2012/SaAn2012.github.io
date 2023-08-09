@@ -1,4 +1,37 @@
+<!DOCTYPE html>
 <html>
+<head>
+<title>Processing.js Test</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.6/processing.min.js"></script>
+<script type="application/processing" data-processing-target="pjs">
+
+PImage spaceship;
+PImage asteroid;
+PImage laser;
+
+void setup() {
+  size(500, 800);
+  spaceship = loadImage("spaceship.png");
+  asteroid = loadImage("asteroid.png");
+  laser = loadImage("laser.png");
+}
+
+void draw() {
+  background(0);
+  imageMode(CENTER);
+  image(spaceship, mouseX, 700, spaceship.width/6, spaceship.height/6);
+  image(asteroid, mouseX, mouseY, 100, 100);
+  image(laser, mouseX, mouseY+150, 10, 100);
+
+}
+</script>
+</head>
+<body>
+<h1>Processing.js Test</h1>
+<p>Demonstrates the syntax for creating a two-dimensional (2D) array.</p>
+<canvas id="pjs"></canvas>
+</body>
+</html>
   <head>
     <script src="https://cdn.jsdelivr.net/npm/p5@1.7.0/lib/p5.js"></script>
     <script src="sketch.js"></script>
